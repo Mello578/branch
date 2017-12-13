@@ -1,0 +1,120 @@
+body{
+	background: url("../img/fon.jpg") no-repeat;
+	background-size: cover;
+	font-family: "Noto Sans", Arial, sans-serif;
+}
+
+.content-block{
+	background: #a9a9a9;
+	width: 800px;
+	margin: auto;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+}
+
+.form-create-post-header{
+	background: #242424;
+	height: 40px;
+	width: 800px;
+}
+
+.form-create-post-form{
+	width: inherit;
+	height: 240px;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	padding: 20px 70px 0 70px;
+}
+
+.form-create-post-form__title{
+	margin-bottom: 20px;
+}
+
+.form-create-post-form__elm-title{
+	height: 25px;
+	margin-bottom: 10px;
+}
+
+.form-create-post-form__elm-post{
+	height: 100px;
+	padding-top: 5px;
+}
+
+.form-create-post-form__elm-title, .form-create-post-form__elm-post{
+	border: 1px solid gray;
+	padding-left: 10px;
+}
+
+.form-create-post-form__btn-location{
+	display: flex;
+	-webkit-justify-content: flex-end;
+	justify-content: flex-end;
+}
+
+.form-create-post-form__btn-create{
+	height: 29px;
+	width: 199px;
+	margin-top: 10px;
+	background: #242424;
+	color: white;
+	border: none;
+}
+
+.form-create-post-form__btn-create:hover{
+	background: #908484;
+}
+
+
+.form-posts{
+	width: inherit;
+	background: white;
+}
+
+
+
+.form-posts__post{
+	padding: 14px 70px;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	background: white;
+}
+
+.form-posts__post--gray{
+	background: #c4c4c4;
+}
+
+.form-posts__post:hover{
+	background: #808080;
+}
+
+.form-posts__post--title,
+.form-posts__detail-post--title{
+	margin-bottom: 25px;
+	font-size: 25px;
+	color: black;
+	text-decoration: none;
+}
+
+.form-posts__detail-post{
+	padding: 14px 70px;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	background: white;
+}
+
+.form-posts__detail-post__btnBack-position{
+	margin: 20px 0;
+}
+
+.form-posts__detail-post--back{
+	color: white;
+	background: black;
+	padding: 10px;
+	text-decoration: none;
+}
