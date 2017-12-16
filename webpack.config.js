@@ -5,16 +5,19 @@
 let webpack = require('webpack');
 
 module.exports = {
-    entry: './src/index.js',
+	  resolve: {
+			extensions: ['.jsx']
+		},
+    entry: './src/index.jsx',
     output: {
-        path: __dirname + '/public/build/',
+        path: __dirname + '/build/',
         publicPath: 'build/',
         filename: 'bundle.js'
     },
     module: {
         loaders: [
             {
-                test: /\.js$/,
+                test: /\.js|jsx$/,
                 loader: 'babel-loader',
                 exclude: [/node_modules/, /public/]
             },
@@ -36,10 +39,26 @@ module.exports = {
             },
             {
 							test: /\.(jpe?g|png|gif|svg)$/i,
-							loaders: [
-								'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
-								'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
-							]
+							loaders: ['file-loader?context=src/images&name=images/[path][name].[ext]', {
+								loader: 'image-webpack-loader',
+								query: {
+									mozjpeg: {
+										progressive: true,
+									},
+									gifsicle: {
+										interlaced: false,
+									},
+									optipng: {
+										optimizationLevel: 7,
+									},
+									pngquant: {
+										quality: '75-90',
+										speed: 3,
+									},
+								},
+							}],
+							exclude: /node_modules/,
+							include: __dirname,
             }
         ]
     },

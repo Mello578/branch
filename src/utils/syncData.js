@@ -17,9 +17,9 @@ function load(url) {
 	})
 }
 
-export const addPosts = (data) => {
-	if (!localStorage.getItem(data)) {
-		return load('../posts.json')
+export const syncData = (data) => {
+	if (!getData(data)) {
+		return load('./posts.json')
 			.then((text) => {
 				localStorage.setItem(data, text);
 				return getData(data);
