@@ -9,7 +9,6 @@ export class PostComponent extends React.Component {
 	}
 
 	render() {
-		console.log(this.props);
 		return <div className='form-posts__detail-post'>
 			<div className='form-posts__detail-post__btnBack-position'>
 				<a href='#' className='form-posts__detail-post--back' onClick={()=>this.allPosts()}>Назад</a>
