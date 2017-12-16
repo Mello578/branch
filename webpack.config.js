@@ -6,7 +6,7 @@ let webpack = require('webpack');
 
 module.exports = {
 	  resolve: {
-			extensions: ['.jsx']
+			extensions: ['.js', '.jsx']
 		},
     entry: './src/index.jsx',
     output: {

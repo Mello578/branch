@@ -3,7 +3,7 @@ import {render} from 'react-dom';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 
-import Application from './components/Application';
+import {Application} from './components/Application';
 import { syncData } from './utils/syncData';
 
 import './main.css';
