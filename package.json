@@ -1,6 +1,6 @@
 {
   "name": "Test",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "This is test",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "css-loader": "^0.28.4",
+    "prop-types": "^15.6.0",
     "react": "15.0.2",
     "react-dom": "15.0.2",
     "react-redux": "5.0.6",

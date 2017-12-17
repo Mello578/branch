@@ -5,4 +5,3 @@ export class Header extends React.Component {
 		return <div className='form-create-post-header'></div>
 	}
 }
-

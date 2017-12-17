@@ -8,9 +8,9 @@ export class EditPostComponent extends React.Component {
 	}
 
 	editPost() {
-		let posts = this.props.posts.filter((currentPost) => {
-			return currentPost.id !== this.props.post.id
-		});
+		let posts = this.props.posts.filter((currentPost) =>
+			currentPost.id !== this.props.post.id
+		);
 		if (this.titleInputEdit.value.length && this.postInputEdit.value.length) {
 			const editedPost = {
 				id: this.props.post.id,
@@ -41,7 +41,6 @@ export class EditPostComponent extends React.Component {
 		</div>
 	}
 }
-
 
 export const EditPost = connect(({currentPostId, posts}) => {
 		return {

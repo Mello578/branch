@@ -37,7 +37,6 @@ export class PostComponent extends React.Component {
 	}
 }
 
-
 export const Post = connect(({currentPostId, posts}) => {
 		return {
 			post: posts.find(({id}) => id === currentPostId),

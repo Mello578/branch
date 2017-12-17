@@ -138,3 +138,15 @@ body{
 .form-posts__detail-post--delete{
 	margin-left: 20px;
 }
+
+.form-posts__detail-post--back:hover{
+	background: #908484;
+}
+
+.form-posts__detail-post--edit:hover{
+	background: #908484;
+}
+
+.form-posts__detail-post--delete:hover{
+	background: #908484;
+}
