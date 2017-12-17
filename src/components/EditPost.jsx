@@ -8,17 +8,19 @@ export class EditPostComponent extends React.Component {
 	}
 
 	editPost() {
-		const noEditPost = this.props.posts.filter((currentPost) => {
+		let posts = this.props.posts.filter((currentPost) => {
 			return currentPost.id !== this.props.post.id
 		});
-		const editedPost = {
-			id: this.props.post.id,
-			title: this.titleInputEdit.value,
-			text: this.postInputEdit.value
-		};
-		const allPost = [...noEditPost, editedPost];
-		localStorage.setItem('allPosts', JSON.stringify(allPost));
-		this.props.showPosts(allPost);
+		if (this.titleInputEdit.value.length && this.postInputEdit.value.length) {
+			const editedPost = {
+				id: this.props.post.id,
+				title: this.titleInputEdit.value,
+				text: this.postInputEdit.value
+			};
+			posts = [...posts, editedPost];
+		}
+		localStorage.setItem('allPosts', JSON.stringify(posts));
+		this.props.showPosts(posts);
 	}
 
 	render() {
@@ -28,7 +30,7 @@ export class EditPostComponent extends React.Component {
 				<input className='form-create-post-form__elm-title' type='text' placeholder={'Название поста'}
 							 ref={input => this.titleInputEdit = input}
 							 defaultValue={this.props.post.title}/>
-				<textarea className='form-create-post-form__elm-post' type='text' placeholder={'Содержание поста'}
+				<textarea className='form-create-post-form__elm-post' placeholder={'Содержание поста'}
 									ref={input => this.postInputEdit = input}
 									defaultValue={this.props.post.text}/>
 				<div className='form-create-post-form__btn-location'>

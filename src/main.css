@@ -126,13 +126,15 @@ body{
 }
 
 .form-posts__detail-post--back,
-.form-posts__detail-post--edit{
+.form-posts__detail-post--edit,
+.form-posts__detail-post--delete{
 	color: white;
 	background: black;
 	padding: 10px;
 	text-decoration: none;
 }
 
-.form-posts__detail-post--edit{
+.form-posts__detail-post--edit,
+.form-posts__detail-post--delete{
 	margin-left: 20px;
 }
