@@ -22,7 +22,7 @@ syncData('allPosts')
 					return {
 						posts: [
 							...state.posts,
-							action.payload.post
+							action.payload
 						],
 						currentPostId: undefined,
 						editMode: false
