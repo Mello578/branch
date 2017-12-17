@@ -55,7 +55,9 @@ body{
 	justify-content: flex-end;
 }
 
-.form-create-post-form__btn-create{
+.form-create-post-form__btn-create,
+.form-create-post-form__btn-back,
+.form-create-post-form__btn-edit{
 	height: 29px;
 	width: 199px;
 	margin-top: 10px;
@@ -68,6 +70,17 @@ body{
 	background: #908484;
 }
 
+.form-create-post-form__btn-back{
+	margin-right: 10px;
+}
+
+.form-create-post-form__btn-edit:hover{
+	background: #908484;
+}
+
+.form-create-post-form__btn-back:hover{
+	background: #908484;
+}
 
 .form-posts{
 	width: inherit;
@@ -112,9 +125,14 @@ body{
 	margin: 20px 0;
 }
 
-.form-posts__detail-post--back{
+.form-posts__detail-post--back,
+.form-posts__detail-post--edit{
 	color: white;
 	background: black;
 	padding: 10px;
 	text-decoration: none;
+}
+
+.form-posts__detail-post--edit{
+	margin-left: 20px;
 }

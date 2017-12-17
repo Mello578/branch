@@ -4,7 +4,7 @@ import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 
 import {Application} from './components/Application';
-import { syncData } from './utils/syncData';
+import {syncData} from './utils/syncData';
 
 import './main.css';
 
@@ -22,14 +22,28 @@ syncData('allPosts')
 					return {
 						posts: [
 							...state.posts,
-							action.payload
+							action.payload.post
 						],
-						currentPostId: undefined
+						currentPostId: undefined,
+						editMode: false
 					};
 				case 'SET_CURRENT_POST_ID':
 					return {
 						posts: state.posts,
-						currentPostId: action.payload
+						currentPostId: action.payload,
+						editMode: false
+					};
+				case 'EDIT_POST':
+					return {
+						posts: state.posts,
+						currentPostId: action.payload.id,
+						editMode: action.payload.editMode
+					};
+				case 'SHOW_POSTS':
+					return {
+						posts: action.payload,
+						currentPostId: undefined,
+						editMode: false
 					};
 
 				default:
